@@ -56,17 +56,17 @@
       } else {
         console.log('Service Worker is not supported by browser.');
       }
-      // if (!('PushManager' in window)) {
-      //     console.log('No Push API Support!')
-      // } else if (Notification.permission !== "denied") {
-      //     Notification.requestPermission().then(function (permission) {
-      //         // If the user accepts, let's create a notification
-      //         if (permission === "granted") {
-      //             // var notification = new Notification("Hi there!");
-      //             console.log("Permission granted for Notification")
-      //         }
-      //     });
-      // }
+      if (!('PushManager' in window)) {
+          console.log('No Push API Support!')
+      } else if (Notification.permission !== "denied") {
+          Notification.requestPermission().then(function (permission) {
+              // If the user accepts, let's create a notification
+              if (permission === "granted") {
+                  // var notification = new Notification("Hi there!");
+                  console.log("Permission granted for Notification")
+              }
+          });
+      }
     </script>
   </body>
 </html>

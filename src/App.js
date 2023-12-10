@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {ToastContainer, Zoom} from "react-toastify";
+import Notification from "./firebaseNotifications/Notification";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           transition={Zoom}
           closeButton={false}
       />
+        <Notification/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
